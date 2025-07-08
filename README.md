@@ -4,6 +4,7 @@
 The **RingBuffer** in this library can be used in **multi-tasking environments without needing locks**,
 provided there is only one primary entity for reading and one for writing to the buffer.
 Additionally, it supports obtaining **differences by tracking ring buffer reads/writes** and by **comparing buffer information**.
+There's some additional information in the Japanese article, "リングバッファの機能を彫り出す", available at https://zenn.dev/kitam/articles/546f4610e9f39f.
 
 Below are basic read and write operations for the RingBuffer.
 
@@ -239,7 +240,7 @@ The following POUs are used for difference acquisition.
     Obtains write differences into a RingBuffer using the tracker created with `RingBuffer_createWriteTracker`.
 
   * `RingBuffer_pullRead`   
-    Obtains read differences into a RingBuffer using a tracker.
+    Obtains read differences into a RingBuffer using the tracker created with `RingBuffer_createReadTracker`.
 
   * `RingBuffer_pull`   
     Obtains both write and read differences into a RingBuffer using the tracker created with `RingBuffer_createTracker`.

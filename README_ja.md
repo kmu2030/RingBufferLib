@@ -1,6 +1,7 @@
 # RingBufferLib
 RingBufferLibは、OMRON社のNX/NJ向けのBYTE型を対象としたリングバッファライブラリです。
 このライブラリのリングバッファ (RingBuffer) は、バッファへの読み書きの主体がそれぞれ1つである時に限り、ロックを使用しなくてもマルチタスクに使用することができます。また、リングバッファの読み書きを追跡しての差分取得とバッファ情報を比較しての差分取得ができます。
+["リングバッファの機能を彫り出す"](https://zenn.dev/kitam/articles/546f4610e9f39f)に幾らか付加的な情報があります。
 
 以下は、RingBufferへの基本的な読み書きです。
 
@@ -228,8 +229,8 @@ RingBufferは、読み書きを追跡しての差分取得とバッファ情報�
 * `RingBuffer_pullWrite`   
    `RingBuffer_createWriteTracker`で作成したトラッカーを使用して書き込み差分をRingBufferに取得します。
 
-* `RingBuffer_pullWrite`   
-   トラッカーを使用して読み出し差分をRingBufferに取得します。
+* `RingBuffer_pullRead`   
+   `RingBuffer_createReadTracker`で作成したトラッカーを使用して読み出し差分をRingBufferに取得します。
 
 * `RingBuffer_pull`   
    `RingBuffer_createTracker`で作成したトラッカーを使用して書き込み差分と読み出し差分をそれぞれRingBufferに取得します。
