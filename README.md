@@ -143,7 +143,7 @@ This project was developed using the following environment.
 ## Library Usage Procedure
 To use the library (`RingBufferLib.slr`), follow these steps.
 
-1.  **Reference `lib/RingBufferLib.slr` in your project.**
+1.  **Reference `RingBufferLib.slr` in your project.**
 
 2.  **Build the project and confirm there are no errors.**   
     The library uses namespaces.   
